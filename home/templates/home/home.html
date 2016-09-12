@@ -65,7 +65,7 @@
   <div class="row">
   <div class="small-12 large-3 medium-3 columns">
    <div class="logo">
-   <a href="index.html" title=""><img width="70px"src="{% static 'images/logo.png'%}" alt="" title=""/></a>
+   <a href="{%url 'home'%}" title=""><img width="70px"src="{% static 'images/logo.png'%}" alt="" title=""/></a>
    </div>
 </div>
 
@@ -78,11 +78,11 @@
          <li><a href="{%url 'que_es'%}">UnMomento</a>
              
          </li>
-         <li><a href="domains.html">CATEGORIAS</a></li>
+         <li><a href="{% url 'categorias' %}">CATEGORIAS</a></li>
         
           <li><a href="#">CONTRIBUCIONES</a>
               <ul>
-                 <li><a href="blog.html">Quiero contribuir</a></li>
+                 <li><a href="{% url 'colaboradores:solicitud' %}">Quiero contribuir</a></li>
                 
               </ul>
           </li>
@@ -96,13 +96,9 @@
     <ul>
   <li><a href="index.html">Inicio</a></li>
          <li><a href="#">unmomento</a>
-             <ul>
-                <li><a href="shared.html">SHARED HOSTING</a></li>
-                <li><a href="vps.html">CLOUD VPS</a></li>
-                <li><a href="servers.html">DEDICATED SERVERS</a></li>
-             </ul>
+             
          </li>
-         <li><a href="domains.html">categorias</a></li>
+         <li><a href="{% url 'categorias' %}">categorias</a></li>
          <li><a href="#">PAGES</a>
              <ul>
                 <li><a href="support.html">SUPPORT</a></li>
@@ -113,7 +109,7 @@
           </li>
           <li><a href="#">Contribuciones</a>
               <ul>
-                 <li><a href="blog.html">Quiero contribuir</a></li>
+                 <li><a href="{% url 'colaboradores:solicitud' %}">Quiero contribuir</a></li>
                 
               </ul>
           </li>

@@ -63,7 +63,7 @@ select { background-color: white; font-family: inherit; border: 0; -webkit-box-s
 /* ==================
    3 = Header 
    ================== */
-header {background:url(images/header_alt-3_bg.jpg) bottom center no-repeat; min-height:880px; position: relative}
+header {background:url(images/derecho-civil-1990.jpg) center center no-repeat;background-size:cover;min-height:650px; position: relative}
 header .message {position: absolute; top:125px; left:1%; right:1%; margin:0 auto; text-align: center}
 .message-intro {display:table-row;line-height:1.5em;font-size:2em;white-space:nowrap;margin-bottom:2em}
 .message-intro p{font-size:inherit;overflow:hidden; display:table-cell;vertical-align:middle;padding-bottom:30px;color:#fff;font-size:22px;font-weight:400; letter-spacing: 2px}
@@ -81,7 +81,7 @@ header h2 {padding:45px 0 25px; font-size:42px; color:#fff; text-align: center; 
 #js-rotating {display: none}
 
 header.alt-1 {background:url(images/header_alt-1_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
-header.alt-2 {background:url(images/header_alt-2_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
+header.alt-2 {background:url(images/derecho-civil-1990.jpg) bottom center no-repeat; min-height:490px; position: relative}
 header.alt-3 {background:url(images/header_alt-3_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
 header.alt-4 {background:url(images/header_alt-4_bg.jpg) bottom center no-repeat; min-height:580px; position: relative}
 header.alt-5 {background:url(images/header_alt-5_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
@@ -89,6 +89,37 @@ header.login {background:transparent; min-height:1px;}
 
 header.alt-1 .message h1, header.alt-2 .message h1, header.alt-4 .message h1 {color: #D7D7D7}
 
+
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+
+header2 {background:url(images/derecho-civil-1990.jpg) center center no-repeat;background-size:cover;min-height:650px; position: relative}
+header2 .message {position: absolute; top:125px; left:1%; right:1%; margin:0 auto; text-align: center}
+.message-intro {display:table-row;line-height:1.5em;font-size:2em;white-space:nowrap;margin-bottom:2em}
+.message-intro p{font-size:inherit;overflow:hidden; display:table-cell;vertical-align:middle;padding-bottom:30px;color:#fff;font-size:22px;font-weight:400; letter-spacing: 2px}
+.message-intro span.message-line{display:table-cell;width:50%}
+.message-intro span.message-line{padding:0 10px}
+.message-intro span.message-line:first-child{padding:0 30px 30px 0}
+.message-intro span.message-line:last-child{padding:0 0 30px 30px}
+.message-intro span.message-line:after{display:inline-block;width:100%;content:".";font-size:0;color:transparent;height:1px;background:#f7ebdf;vertical-align:middle;position:relative;top:0}
+header2 .message h1 {color:#67484e; font-size:45px; font-weight:900; margin:8px 0 0; padding:0;}
+header2 .message .button {background:transparent; border:1px solid #f7ebdf; color:#f7ebdf; margin-top:60px; font-weight:700;}
+header2 .message .button:hover {background:#65464c; border-color:#65464c; text-decoration: none}
+.top {background:#232e3f; background: rgba(35,46,63,.6); padding:0; width:100%;}
+.logo {margin:15px 0 12px;}
+header2 h2 {padding:45px 0 25px; font-size:42px; color:#fff; text-align: center; font-weight: 100}
+#js-rotating {display: none}
+
+header2.alt-1 {background:url(images/header_alt-1_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
+header2.alt-2 {background:url(images/derecho-civil-1990.jpg) bottom center no-repeat; min-height:490px; position: relative}
+header2.alt-3 {background:url(images/header_alt-3_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
+header2.alt-4 {background:url(images/header_alt-4_bg.jpg) bottom center no-repeat; min-height:580px; position: relative}
+header2.alt-5 {background:url(images/header_alt-5_bg.jpg) bottom center no-repeat; min-height:490px; position: relative}
+header2.login {background:transparent; min-height:1px;}
+
+header.alt-1 .message h1, header.alt-2 .message h1, header.alt-4 .message h1 {color: #D7D7D7}
 /* Navigation  ---------------------- */
 nav.desktop-menu {  padding: 0; float:right; text-align: left; }
 .slicknav_menu, .mobile-menu { display:none;  }
@@ -141,7 +172,7 @@ ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul { left: 175px; top:
 .features.premium-servers h2 {color:#d7d7d7;}
 .features.premium-servers p {color:#ccc;}
 .features p {text-align: center;}
-.features ul {margin-top:60px;}
+.features ul {margin-top:-60px;}
 .features ul li {text-align: center; padding:50px 20px 20px; border:1px solid #E0E0E0; border-left:0; border-top:0; min-height:230px;}
 .features ul li:nth-child(3n+3) { border-right:0;}
 .features ul li:nth-last-child(-n+3) {border-bottom:0;}

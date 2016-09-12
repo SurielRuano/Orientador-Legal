@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from home import urls as homeUrls
-from plataforma import urls as queUrls
+from plataforma import urls as platUrls
 from colaboradores import urls as colabUrls
 from django.conf import settings
 from django.views.static import serve
+from plataforma import views
 urlpatterns = [
 	url(r'^',include(homeUrls)),
     url(r'^admin/', admin.site.urls),
@@ -28,6 +29,7 @@ urlpatterns = [
     view=serve,
     kwargs={'document_root':settings.MEDIA_ROOT}),
 
-    url(r'^que_es/',include(queUrls)),
-    url(r'^colaboradores/',include(colabUrls,namespace='colaboradores'))
+    url(r'^que_es/',include(platUrls)),
+    url(r'^colaboradores/',include(colabUrls,namespace='colaboradores')),
+    url(r'^categorias/',views.Categorias.as_view(),name='categorias'),
 ]

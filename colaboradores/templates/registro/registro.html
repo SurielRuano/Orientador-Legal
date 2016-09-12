@@ -1,9 +1,10 @@
-{% extends "base.html" %}
+
+{%extends 'base.html'%}
+{%load staticfiles%}
 
 
 
-
-{% block title %}
+{% block title%}
 
 Solicitud de Colaboracion
 	
@@ -12,7 +13,90 @@ Solicitud de Colaboracion
 
 {% block content %}
 
+
+<!--  HEADER -->    
+<header class="alt-2">
+<!--  MESSAGES ABOVE HEADER IMAGE -->
+<div class="message">
+<div class="row">
+<div class="small-12 columns">
+<div class="message-intro">
+<span class="message-line"></span>
+<p>UnMomento</p>
+<span class="message-line"></span>
+</div>
+<h1>¿Quieres colaborar?</h1>
+</div>
+</div>
+</div>
+<!--  END OF MESSAGES ABOVE HEADER IMAGE -->
+
+<div class="top">
+  <div class="row">
+  <div class="small-12 large-3 medium-3 columns">
+   <div class="logo">
+  <a href="{%url 'home'%}" title=""><img width="70px"src="{% static 'images/logo.png'%}" alt="" title=""/></a>
+   </div>
+</div>
+
+<div class="small-12 large-9 medium-9 columns">
+<!--  NAVIGATION MENU AREA -->
+    <nav class="desktop-menu">
+      <ul class="sf-menu">
+         <li class="current-menu-item"><a href="{%url 'home'%}">Buscar</a></li>
+         <li><a href="{%url 'que_es'%}">UnMomento</a>
+             
+         </li>
+         <li><a href="{% url 'categorias' %}">CATEGORIAS</a></li>
+        
+          <li><a href="#">CONTRIBUCIONES</a>
+              <ul>
+                 <li><a href="blog.html">Quiero contribuir</a></li>
+                
+              </ul>
+          </li>
+          <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+<!--  END OF NAVIGATION MENU AREA --> 
+
+<!--  MOBILE MENU AREA -->
+  <nav class="mobile-menu">
+    <ul>
+  <li><a href="index.html">Inicio</a></li>
+         <li><a href="#">unmomento</a>
+             
+         </li>
+         <li><a href="{% url 'categorias' %}">categorias</a></li>
+         <li><a href="#">PAGES</a>
+             <ul>
+                <li><a href="support.html">SUPPORT</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                <li><a href="typography.html">TYPOGRAPHY</a></li>
+             </ul>
+          </li>
+          <li><a href="#">Contribuciones</a>
+              <ul>
+                 <li><a href="blog.html">Quiero contribuir</a></li>
+                
+              </ul>
+          </li>
+          <li><a href="contact.html">contacto</a></li>
+</ul>
+  </nav>
+  <!--  END OF MOBILE MENU AREA -->
+
+  </div>
+  </div>
+  </div>
+
+</header>  
+<!--  END OF HEADER -->  
+
+
+
 {{form.as_p}}
-esta es la plantilla para la solicitud de registro
+
 	
 {% endblock content %}

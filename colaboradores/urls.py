@@ -5,6 +5,6 @@ from . import views
 
 
 urlpatterns = [
-	url(r'^solicitud-colaboracion/$', views.Solicitud_colaboracion.as_view(),name="solicit"),
+	url(r'^solicitud-colaboracion/$', views.Solicitud_colaboracion.as_view(),name="solicitud"),
 	
 ]

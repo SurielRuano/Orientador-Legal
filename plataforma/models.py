@@ -20,12 +20,14 @@ class Colaborador(models.Model):
 class Categoria(models.Model):
 
 
-	categoria = models.CharField(max_length=100)
+	nombre_cat = models.CharField(max_length=100)
+	descripcion_cat = models.TextField(max_length=400)
+	imagen_cat = models.ImageField(upload_to= 'categorias',blank=True,null=True)
 	
 
 	def __str__(self):
 
-		return self.categoria
+		return self.nombre_cat
 
 
 
