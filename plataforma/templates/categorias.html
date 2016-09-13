@@ -90,41 +90,27 @@
 
 <ul class="small-block-grid-1 large-block-grid-3 medium-block-grid-3">
 
-<li  data-wow-delay="0.2s" class="wow fadeInLeft">
-<i class="fa fa-car"></i>
-<h3>Accidente de transito</h3>
-<p>Food truck artisan cillum voluptate umami Austin quis, viral asymmetrical freegan occaecat swag skateboard</p>
+
+{% for categoria in  cat %}
+
+
+  <li  data-wow-delay="0.2s" class="wow fadeInLeft">
+  <a href="">
+    <i class="fa {{categoria.imagen_cat}}"></i>
+    <h3>{{categoria.nombre_cat}}</h3>
+    <p>{{categoria.descripcion_cat}}</p>
+
+  </a>
 </li>
 
-<li data-wow-delay="0.4s" class="wow fadeInLeft">
-<i class="fa fa-users"></i>
-<h3>Riñas</h3>
-<p>Food truck artisan cillum voluptate umami Austin quis, viral asymmetrical freegan occaecat swag skateboard</p>
-</li>
 
-<li data-wow-delay="0.6s" class="wow fadeInLeft">
-<i class="fa fa-money"></i>
-<h3>Deudas</h3>
-<p>Food truck artisan cillum voluptate umami Austin quis, viral asymmetrical freegan occaecat swag skateboard</p>
-</li>
 
-<li data-wow-delay="0.2s" class="wow fadeInRight">
-<i class="fa fa-bolt"></i>
-<h3>Divorcios</h3>
-<p>Food truck artisan cillum voluptate umami Austin quis, viral asymmetrical freegan occaecat swag skateboard</p>
-</li>
+  
+  
+{% endfor %}
 
-<li data-wow-delay="0.4s" class="wow fadeInRight">
-<i class="fa fa-home"></i>
-<h3>Herencias</h3>
-<p>Food truck artisan cillum voluptate umami Austin quis, viral asymmetrical freegan occaecat swag skateboard</p>
-</li>
 
-<li data-wow-delay="0.6s" class="wow fadeInRight">
-<i class="fa fa-rocket"></i>
-<h3>Running at scale</h3>
-<p>Food truck artisan cillum voluptate umami Austin quis, viral asymmetrical freegan occaecat swag skateboard</p>
-</li>
+
 
 </ul>
 </div>

@@ -22,7 +22,7 @@ class Categoria(models.Model):
 
 	nombre_cat = models.CharField(max_length=100)
 	descripcion_cat = models.TextField(max_length=400)
-	imagen_cat = models.ImageField(upload_to= 'categorias',blank=True,null=True)
+	imagen_cat = models.CharField(max_length=100,blank=True,null=True)
 	
 
 	def __str__(self):

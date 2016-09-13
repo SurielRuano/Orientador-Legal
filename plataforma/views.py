@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
+from .models import Categoria
 
 
 
@@ -14,4 +15,8 @@ class Categorias(View):
 	def get(self,request):
 		template_name = 'categorias.html'
 
-		return render(request,template_name)
+		cat = Categoria.objects.all()
+
+		context = {'cat':cat}
+
+		return render(request,template_name,context)
