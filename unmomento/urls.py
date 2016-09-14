@@ -31,5 +31,6 @@ urlpatterns = [
 
     url(r'^que_es/',include(platUrls)),
     url(r'^colaboradores/',include(colabUrls,namespace='colaboradores')),
+    url(r'^articulo/',include(platUrls,namespace='articulo')),
     url(r'^categorias/',views.Categorias.as_view(),name='categorias'),
 ]

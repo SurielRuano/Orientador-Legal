@@ -1,4 +1,7 @@
 from django.db import models
+from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 class Colaborador(models.Model):
@@ -22,8 +25,12 @@ class Categoria(models.Model):
 
 	nombre_cat = models.CharField(max_length=100)
 	descripcion_cat = models.TextField(max_length=400)
+	slug = models.SlugField(max_length=200,unique_for_date='nombre_cat')
 	imagen_cat = models.CharField(max_length=100,blank=True,null=True)
+
 	
+	def get_absolute_url(self):
+		return reverse('categorias', args=[self.slug])
 
 	def __str__(self):
 
