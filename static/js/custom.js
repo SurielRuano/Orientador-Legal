@@ -121,3 +121,60 @@ $('#back-to-top').click(function(){
 $(document).foundation();
 
 })(jQuery);
+
+
+$(document).ready(function(){
+
+
+
+
+  $("#buscarCat").click(function(e){
+
+    e.preventDefault();
+    var bandera = false;
+
+
+    slug = $("#slug_cat").val();
+
+
+  if(slug == ''){
+
+      $("#slug_cat").css('border','solid 2px red');
+      $("#slug_cat").addClass('animated shake');
+
+      setTimeout(function(){
+
+      $("#slug_cat").removeClass('animated shake');
+      
+
+
+      },500)
+
+      bandera = true;   
+  }
+
+
+    if(bandera == false){
+
+      $("#buscForm").attr('action',slug);
+
+      $("#buscForm").submit();
+
+
+
+    }
+
+
+      
+
+            
+
+
+
+
+
+
+  })
+
+
+})

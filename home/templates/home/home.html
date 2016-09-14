@@ -33,17 +33,17 @@
 <div class="small-12 large-7 large-centered medium-7 medium-centered columns">
 
 <div class="login-form">
-<form method="post" action="categoria">
+<form method="post" id="buscForm" action="">
 
 {%csrf_token %}
 
 
-<select>
-      <option>¿Qué te sucedió?</option>
+<select id="slug_cat">
+      <option value="">¿Qué te sucedió?</option>
 
       {% for cat in categoria %}
 
-              <option value="{{cat.slug}}">{{cat.nombre_cat}}</option>
+              <option value="{{cat.get_absolute_url}}">{{cat.nombre_cat}}</option>
         
       {% endfor %}
 
@@ -51,7 +51,7 @@
   </select>
 
 
-<input type="submit" value="Buscar">
+<input id="buscarCat" type="submit" value="Buscar">
 </form>
 </div>
 

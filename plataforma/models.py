@@ -25,7 +25,7 @@ class Categoria(models.Model):
 
 	nombre_cat = models.CharField(max_length=100)
 	descripcion_cat = models.TextField(max_length=400)
-	slug = models.SlugField(max_length=200,unique_for_date='nombre_cat')
+	slug = models.SlugField(max_length=200)
 	imagen_cat = models.CharField(max_length=100,blank=True,null=True)
 
 	
