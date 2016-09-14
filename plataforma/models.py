@@ -30,7 +30,7 @@ class Categoria(models.Model):
 
 	
 	def get_absolute_url(self):
-		return reverse('categorias', args=[self.slug])
+		return reverse('categoria:listaArticulos', args=[self.slug])
 
 	def __str__(self):
 
@@ -44,8 +44,8 @@ class Articulo(models.Model):
 
 	articulo = models.CharField(max_length=100)
 	contenido = models.CharField(max_length=100)
-	categoria = models.ManyToManyField(Categoria)
-	colaborador = models.ForeignKey(Colaborador)
+	categoria = models.ManyToManyField(Categoria,related_name='articulos')
+	colaborador = models.ForeignKey(Colaborador, related_name='articulos')
 
 	def __str__(self):
 

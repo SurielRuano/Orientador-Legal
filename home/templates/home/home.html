@@ -33,18 +33,21 @@
 <div class="small-12 large-7 large-centered medium-7 medium-centered columns">
 
 <div class="login-form">
-<form method="post">
+<form method="post" action="categoria">
 
 {%csrf_token %}
 
 
 <select>
       <option>¿Qué te sucedió?</option>
-      <option>Accidente de transito</option>
-      <option>Rina</option>
-      <option>Me deben dineo - Debo dinero</option>
-      <option>Me quiero divorciar</option>
-      <option>Problemas con herencia</option>
+
+      {% for cat in categoria %}
+
+              <option value="{{cat.slug}}">{{cat.nombre_cat}}</option>
+        
+      {% endfor %}
+
+
   </select>
 
 
