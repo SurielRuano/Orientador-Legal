@@ -7,8 +7,8 @@ class ArticulosFiltro(admin.ModelAdmin):
 
 	
 
-	list_display=['articulo','colaborador']
-	list_filter=['articulo','categoria']
+	list_display=['titulo','colaborador']
+	list_filter=['titulo','categoria']
 
 admin.site.register(Colaborador)
 admin.site.register(Articulo, ArticulosFiltro)

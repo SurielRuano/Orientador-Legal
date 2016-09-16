@@ -42,11 +42,17 @@ class Categoria(models.Model):
 class Articulo(models.Model):
 
 
-	articulo = models.CharField(max_length=100)
-	contenido = models.CharField(max_length=100)
+	titulo = models.CharField(max_length=100)
+	
+	descripcion_breve = models.TextField(max_length=100,null=False)
+	cuerpo_principal = models.TextField(max_length=100,null=False)
+	derechos = models.TextField(max_length=100,null=True,blank=True)
+	obligaciones = models.TextField(max_length=100,null=True,blank=True)
+	fecha = models.DateTimeField(auto_now=True)
 	categoria = models.ManyToManyField(Categoria,related_name='articulos')
 	colaborador = models.ForeignKey(Colaborador, related_name='articulos')
+	aprobar = models.BooleanField(default=False)
 
 	def __str__(self):
 
-		return self.articulo
+		return self.titulo

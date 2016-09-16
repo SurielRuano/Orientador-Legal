@@ -42,7 +42,7 @@
   <div class="row">
   <div class="small-12 large-3 medium-3 columns">
    <div class="logo">
-   <a href="index.html" title=""><img src="images/logo.png" alt="" title=""/></a>
+   <a href="{%url 'home'%}" title=""><img width="70px"  src="{% static 'images/logo.png'%}" alt="" title=""/></a>
    </div>
 </div>
 
@@ -113,14 +113,14 @@
 <!-- POST START -->
 <div class="entry">
 
-  <h2><a href="">{{art.articulo}}</a></h2>
+  <h2><a href="">{{art.titulo}}</a></h2>
 
 
-<p>{{art.contenido}}</p>
+<p>{{art.descripcion_breve}}</p>
 
 <a href="#" class="small radius button">Leer mas</a>
 
-<div class="meta">12th of August 2014, Written by <a href="">Stephen Leggings</a> <i class="fa fa-comment-o"></i><a href="">3 comments</a></div>
+<div class="meta">{{art.fecha|date:"d M Y"}}, Escrito por <a href="">{{art.colaborador.nombre}}</a> <i class="fa fa-comment-o"></i><a href="">3 comentarios</a></div>
 
 </div>
 <!-- POST END -->
