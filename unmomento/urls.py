@@ -21,6 +21,8 @@ from colaboradores import urls as colabUrls
 from django.conf import settings
 from django.views.static import serve
 from plataforma import views
+from plataforma.api import urls as apiUrls
+
 urlpatterns = [
 	url(r'^',include(homeUrls)),
     url(r'^admin/', admin.site.urls),
@@ -34,4 +36,5 @@ urlpatterns = [
     url(r'^articulo/',include(platUrls,namespace='articulo')),
     url(r'^categorias/',views.Categorias.as_view(),name='categorias'),
     url(r'^categoria/',include(platUrls,namespace='categoria')),
+    url(r'^api/', include(apiUrls)),
 ]

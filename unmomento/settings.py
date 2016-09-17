@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'plataforma',
     'colaboradores',
     'taggit',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -138,3 +141,9 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/media/'
+
+REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES':[
+'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']}
+
+
+CORS_ORIGIN_ALLOW_ALL =True 

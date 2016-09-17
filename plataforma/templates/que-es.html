@@ -35,7 +35,7 @@
   <div class="row">
   <div class="small-12 large-3 medium-3 columns">
    <div class="logo">
-  <a href="{%url 'home'%}" title=""><img width="70px"src="{% static 'images/logo.png'%}" alt="" title=""/></a>
+  <a href="{%url 'home'%}" title=""><img src="{% static 'images/logo.png'%}" alt="" title=""/></a>
    </div>
 </div>
 
@@ -43,15 +43,15 @@
 <!--  NAVIGATION MENU AREA -->
     <nav class="desktop-menu">
       <ul class="sf-menu">
-         <li class="current-menu-item"><a href="{%url 'home'%}">Buscar</a></li>
-         <li><a href="{%url 'que_es'%}">UnMomento</a>
+         <li><a href="{%url 'home'%}">Buscar</a></li>
+         <li class="current-menu-item"><a href="{%url 'que_es'%}">UnMomento</a>
              
          </li>
          <li><a href="{% url 'categorias' %}">CATEGORIAS</a></li>
         
           <li><a href="#">CONTRIBUCIONES</a>
               <ul>
-                 <li><a href="blog.html">Quiero contribuir</a></li>
+                 <li><a href="{% url 'colaboradores:solicitud' %}">Quiero contribuir</a></li>
                 
               </ul>
           </li>
