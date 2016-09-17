@@ -44,10 +44,10 @@ class Articulo(models.Model):
 
 	titulo = models.CharField(max_length=100)
 	
-	descripcion_breve = models.TextField(max_length=100,null=False)
-	cuerpo_principal = models.TextField(max_length=100,null=False)
-	derechos = models.TextField(max_length=100,null=True,blank=True)
-	obligaciones = models.TextField(max_length=100,null=True,blank=True)
+	descripcion_breve = models.TextField(max_length=250,null=False)
+	cuerpo_principal = models.TextField(max_length=2000,null=False)
+	que_hacer = models.TextField(max_length=2000,null=True,blank=True)
+	que_evitar = models.TextField(max_length=2000,null=True,blank=True)
 	fecha = models.DateTimeField(auto_now=True)
 	categoria = models.ManyToManyField(Categoria,related_name='articulos')
 	colaborador = models.ForeignKey(Colaborador, related_name='articulos')
