@@ -63,7 +63,7 @@
                 
               </ul>
           </li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <!-- <li><a href="contact.html">CONTACT</a></li> -->
     </ul>
   </nav>
 <!--  END OF NAVIGATION MENU AREA --> 
@@ -71,18 +71,13 @@
 <!--  MOBILE MENU AREA -->
   <nav class="mobile-menu">
     <ul>
-  <li><a href="index.html">Inicio</a></li>
-         <li><a href="#">unmomento</a>
+  <li><a href="{%url 'home'%}">BUSCAR</a></li>
+         <li><a href="{%url 'que_es'%}">unmomento</a>
              
          </li>
-         <li class="current-menu-item"><a href="{% url 'categorias' %}">categorias</a></li>
-         <li><a href="#">PAGES</a>
-             <ul>
-                <li><a href="support.html">SUPPORT</a></li>
-                <li><a href="login.html">LOGIN</a></li>
-                <li><a href="testimonials.html">TESTIMONIALS</a></li>
-                <li><a href="typography.html">TYPOGRAPHY</a></li>
-             </ul>
+         
+         <li><a href="{% url 'categorias' %}">CATEGORIAS</a>
+             
           </li>
           <li><a href="#">Contribuciones</a>
               <ul>
@@ -90,7 +85,7 @@
                 
               </ul>
           </li>
-          <li><a href="contact.html">contacto</a></li>
+         <!--  <li><a href="contact.html">contacto</a></li> -->
 </ul>
   </nav>
   <!--  END OF MOBILE MENU AREA -->
@@ -165,7 +160,8 @@ END OF PAGINATION-->
 <div class="sidebar">
 
 {%show_categorias%}
-
+{%show_articulos_sidebar%}
+<!-- 
 <div class="widget">
 <h4 class="widget_title"><span>Search</span></h4>
 <form method="get" id="searchform" action="blog_category.html">
@@ -178,25 +174,17 @@ END OF PAGINATION-->
    </div>
    </div>
    </form>
-</div>
+</div> -->
 
 
 
 <div class="widget">
-<h4 class="widget_title"><span>TAGS</span></h4>
+<h4 class="widget_title"><span>ETIQUETAS</span></h4>
 <div class="tagcloud">
-<a href="">web servers</a>
-<a href="">windows</a>
-<a href="">unix</a>
-<a href="">server solutions</a>
-<a href="">colocation</a>
-<a href="">data centers</a>
-<a href="">server hardware</a>
-<a href="">bandwidth</a>
-<a href="">web hosting</a>
-<a href="">cloud hosting</a>
-<a href="">internet</a>
-<a href="">game-servers</a>
+<a href="">Robo</a>
+<a href="">Accidente</a>
+<a href="">Herencias</a>
+
 </div>
 </div>
 

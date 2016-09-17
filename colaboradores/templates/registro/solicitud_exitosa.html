@@ -24,12 +24,10 @@ Solicitud de Colaboracion
 <span class="message-line"></span>
 <p>UnMomento</p>
 <span class="message-line"></span>
-</div>
-<h1>{% for cat in  categoria %}
 
-  {{cat.nombre_cat}}
-  
-{% endfor %}</h1>
+</div>
+<h1>Solicitud enviada</h1>
+
 </div>
 </div>
 </div>
@@ -100,23 +98,20 @@ Solicitud de Colaboracion
 </header>  
 <!--  END OF HEADER --> 
 <!-- COMMENTS -->
-<div style="margin:0 auto 0 auto;left: 0;right: 0;width:70%" class="">
 
-
-<div class="commentsform">
-<div id="addcomments">
-<div id="respond" class="comment-respond">
-<h3 id="reply-title" class="comment-reply-title">Envianos tu solicitud</h3>
-<form action="." method="post" id="commentform" class="comment-form" novalidate>
-{% csrf_token %}
-{{form.as_p}}
-<p class="form-submit"><input name="submit" type="submit" id="submit" value="Enviar" /></p>
-</form>
-</div>
-</div>
-</div>
+<div align="center">
+<br>
+<br>
+<br>
+  
+  <h1>Gracias por enviar tu solicitud</h1>
 <!-- END OF COMMENTS -->
+<p>En los proximos dias te contactaremos para verificar la autenticidad de tu informacion,  necesitamos que los articulos que se publiquen en la pagina sean de calidad y realizados con responzabilidad, que tengas un buen dia. </p>
 
+<br>
+<br>
+<br>
+</div>
 
 
 

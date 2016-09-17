@@ -42,7 +42,7 @@
                 
               </ul>
           </li>
-          <li><a href="contact.html">CONTACT</a></li>
+         <!--  <li><a href="contact.html">CONTACT</a></li> -->
     </ul>
   </nav>
 <!--  END OF NAVIGATION MENU AREA --> 
@@ -50,26 +50,21 @@
 <!--  MOBILE MENU AREA -->
   <nav class="mobile-menu">
     <ul>
-  <li><a href="index.html">Inicio</a></li>
-         <li><a href="#">unmomento</a>
-           
+  <li><a href="{%url 'home'%}">BUSCAR</a></li>
+         <li><a href="{%url 'que_es'%}">unmomento</a>
+             
          </li>
-         <li class="current-menu-item"><a href="{% url 'categorias' %}">categorias</a></li>
-         <li><a href="#">PAGES</a>
-             <ul>
-                <li><a href="support.html">SUPPORT</a></li>
-                <li><a href="login.html">LOGIN</a></li>
-                <li><a href="testimonials.html">TESTIMONIALS</a></li>
-                <li><a href="typography.html">TYPOGRAPHY</a></li>
-             </ul>
+         
+         <li><a href="{% url 'categorias' %}">CATEGORIAS</a>
+             
           </li>
           <li><a href="#">Contribuciones</a>
               <ul>
-                 <li><a href="blog.html">Quiero contribuir</a></li>
+                 <li><a href="{% url 'colaboradores:solicitud' %}">Quiero contribuir</a></li>
                 
               </ul>
           </li>
-          <li><a href="contact.html">contacto</a></li>
+         <!--  <li><a href="contact.html">contacto</a></li> -->
 </ul>
   </nav>
   <!--  END OF MOBILE MENU AREA -->
