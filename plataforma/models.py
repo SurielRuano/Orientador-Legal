@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
+from taggit.managers import TaggableManager
 
 
 # Create your models here.
@@ -43,7 +44,7 @@ class Articulo(models.Model):
 
 
 	titulo = models.CharField(max_length=100)
-	
+	tags = TaggableManager()	
 	descripcion_breve = models.TextField(max_length=250,null=False)
 	cuerpo_principal = models.TextField(max_length=2000,null=False)
 	que_hacer = models.TextField(max_length=2000,null=True,blank=True)
@@ -52,6 +53,10 @@ class Articulo(models.Model):
 	categoria = models.ManyToManyField(Categoria,related_name='articulos')
 	colaborador = models.ForeignKey(Colaborador, related_name='articulos')
 	aprobar = models.BooleanField(default=False)
+	slug = models.SlugField(max_length=200, null=True)
+
+	def get_absolute_url(self):
+		return reverse('categoria:detalleArticulo', args=[self.slug])
 
 	def __str__(self):
 

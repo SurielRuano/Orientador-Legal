@@ -1,4 +1,6 @@
 {% load static %}
+{% load categorias_inclusion_tag %}
+
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -59,7 +61,7 @@ México
 </div>
 <div class="small-12 large-3 medium-3 columns">
 <i class="fa fa-mobile"></i>
-+1 299-670-9615
+Responsive
 </div>
 <div class="small-12 large-3 medium-3 columns">
 <a href=""><i class="fa fa-comments"></i></a>
@@ -67,7 +69,7 @@ LIVE CHAT
 </div>
 <div class="small-12 large-3 medium-3 columns">
 <a href=""><i class="fa fa-envelope-o"></i></a>
-E-MAIL US
+Escribenos
 </div>
 </div>
 </div>
@@ -86,19 +88,10 @@ E-MAIL US
 </ul>
 </div>
 
-<div class="small-12 large-3 medium-3 columns border-right">
-<h2>Company</h2>
-<ul>
-<li><a href="">About us</a></li>
-<li><a href="">Blog</a></li>
-<li><a href="">Terms of Service</a></li>
-<li><a href="">Acceptable Use Policy</a></li>
-<li><a href="">Affiliates</a></li>
-</ul>
-</div>
+{%show_categorias_footer%}
 
 <div class="small-12 large-3 medium-3 columns border-right">
-<h2>Add-on Services</h2>
+<h2>Articulos recientes</h2>
 <ul>
 <li><a href="">SSL Certificates</a></li>
 <li><a href="">Dedicated IPs</a></li>
@@ -109,14 +102,14 @@ E-MAIL US
 </div>
 
 <div class="small-12 large-3 medium-3 columns">
-<h2>CloudMe Newsletter</h2>
-<p>Sign up for special offers:</p>
+<h2>Boletin UnMomento</h2>
+<p>Registrate:</p>
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="//audemedia.us7.list-manage.com/subscribe/post?u=b5638e105dac814ad84960d90&amp;id=9345afa0aa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
   
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Direccion email" required>
 
  
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->

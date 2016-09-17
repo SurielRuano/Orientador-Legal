@@ -93,10 +93,32 @@ Solicitud de Colaboracion
 
 </header>  
 <!--  END OF HEADER -->  
+<!-- COMMENTS -->
+<div style="margin:0 auto 0 auto;left: 0;right: 0;width:70%" class="">
 
 
-
+<div class="commentsform">
+<div id="addcomments">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Envianos tu solicitud</h3>
+<form action="blog_single.html" method="post" id="commentform" class="comment-form" novalidate>
 {{form.as_p}}
+<p class="form-submit"><input name="submit" type="submit" id="submit" value="Enviar" /></p>
+</form>
+</div>
+</div>
+</div>
+<!-- END OF COMMENTS -->
+
+
+
+
+
+</div>
+
+
+
+
 
 	
 {% endblock content %}

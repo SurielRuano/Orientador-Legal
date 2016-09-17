@@ -4,6 +4,7 @@ from .models import Categoria, Articulo
 
 
 
+
 class Que_es(View):
 	def get(self,request):
 		template_name="que-es.html"	
@@ -27,9 +28,10 @@ class ListaCategoria(View):
 		template_name = "categoria-articulos.html"
 		cat =  Categoria.objects.filter(slug = slug)
 		# articulos = Articulo.objects.select_related()
+		slug = slug
 		articulos = Articulo.objects.filter(categoria = cat) 		
 
-		context = {'categoria':cat, 'articulos':articulos}
+		context = {'categoria':cat, 'articulos':articulos,"slug":slug}
 		return render(request,template_name,context)
 
 
@@ -41,4 +43,15 @@ class ListaCategoria(View):
 		articulos = Articulo.objects.filter(categoria = cat) 		
 
 		context = {'categoria':cat, 'articulos':articulos}
+		return render(request,template_name,context)
+
+class Detalle_articulo(View):
+	def get(self,request,slug,slug2):
+
+		template_name = "detalle_articulo.html"
+		art =  Articulo.objects.filter(slug = slug2)
+		# articulos = Articulo.objects.select_related()
+		
+
+		context = {'articulo':art}
 		return render(request,template_name,context)

@@ -1,0 +1,14 @@
+<!-- estructura html para template_tags -->
+
+
+	
+
+<div class="widget">
+<h4 class="widget_title"><span>Categorias</span></h4>   
+<ul>
+	{%for categoria in categorias%}
+<li><a href="{{categoria.get_absolute_url}}"><strong>{{categoria.nombre_cat}}</strong></a></li>
+
+	{%endfor%}
+</ul>
+</div>

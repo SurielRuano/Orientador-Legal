@@ -6,7 +6,7 @@ from .models import Colaborador, Articulo, Categoria
 class ArticulosFiltro(admin.ModelAdmin):
 
 	
-
+	prepopulated_fields = {'slug':('titulo',)}
 	list_display=['titulo','colaborador']
 	list_filter=['titulo','categoria']
 

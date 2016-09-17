@@ -1,0 +1,14 @@
+<div class="small-12 large-3 medium-3 columns border-right">
+<h2>Categorias</h2>
+<ul>
+
+{% for categoria  in  categorias %}
+
+<li><a href="{{categoria.get_absolute_url}}"><strong>{{categoria.nombre_cat}}</strong></a></li>
+
+	
+{% endfor %}
+<li><a href="{%url 'categorias'%}">Ver mas...</a></li>
+
+</ul>
+</div>
